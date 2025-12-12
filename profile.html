@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Bookmark Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Using Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <a href="index.html" class='bx bxs-bookmark' style="font-size: 1.5rem;"></a>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-item">
+                <i class='bx bx-home-alt'></i>
+                Home
+            </a>
+            <a href="#" class="nav-item">
+                <i class='bx bx-box'></i>
+                Archived
+            </a>
+        </nav>
+
+        <div class="tags-section-title">TAGS</div>
+        <div class="tags-list">
+            <!-- Static list for consistent look, though functionality isn't required here -->
+            <a href="index.html" class="tag-item"><span><i class='bx bx-checkbox'></i> AI</span></a>
+            <a href="index.html" class="tag-item"><span><i class='bx bx-checkbox'></i> CSS</span></a>
+            <a href="index.html" class="tag-item"><span><i class='bx bx-checkbox'></i> HTML</span></a>
+            <a href="index.html" class="tag-item"><span><i class='bx bx-checkbox'></i> JavaScript</span></a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="search-bar">
+                <i class='bx bx-search search-icon'></i>
+                <input type="text" class="search-input" placeholder="Search by title...">
+            </div>
+            <div class="header-actions">
+                <!-- No add button here, or link back home -->
+                <a href="index.html" class="btn-primary" style="text-decoration:none;">
+                    <i class='bx bx-arrow-back'></i> Back to Home
+                </a>
+                <a href="profile.html" class="profile-link">
+                    <span>John Doe</span>
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=0D8ABC&color=fff" alt="User Profile"
+                        class="user-avatar">
+                </a>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">My Profile</h2>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-header-large">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=0D8ABC&color=fff&size=128"
+                        alt="Profile" class="profile-avatar-large">
+                    <div class="profile-info">
+                        <h2>John Doe</h2>
+                        <span class="profile-email">john.doe@example.com</span>
+                        <div class="stat-row">
+                            <div class="profile-stat">
+                                <span class="stat-value">124</span>
+                                <span class="stat-label">Bookmarks</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Collections</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="stat-value">8</span>
+                                <span class="stat-label">Tags</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" value="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" value="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Bio</label>
+                        <textarea
+                            class="form-textarea">Frontend developer and UI enthusiast. Collecting the best tools and resources for web development.</textarea>
+                    </div>
+                    <div class="form-actions" style="margin-top:24px;">
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Using Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i class='bx bxs-bookmark' style="font-size: 1.5rem;"></i>
+            Bookmark Manager
+        </div>
+
+        <nav>
+            <a href="#" class="nav-item active">
+                <i class='bx bx-home-alt'></i>
+                Home
+            </a>
+            <a href="#" class="nav-item">
+                <i class='bx bx-box'></i>
+                Archived
+            </a>
+        </nav>
+
+        <div class="tags-section-title">TAGS</div>
+        <div class="tags-list">
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> AI</span>
+                <span class="tag-count">1</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Community</span>
+                <span class="tag-count">5</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Compatibility</span>
+                <span class="tag-count">1</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> CSS</span>
+                <span class="tag-count">6</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Design</span>
+                <span class="tag-count">1</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Framework</span>
+                <span class="tag-count">2</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Git</span>
+                <span class="tag-count">1</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> HTML</span>
+                <span class="tag-count">2</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> JavaScript</span>
+                <span class="tag-count">3</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Learning</span>
+                <span class="tag-count">6</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Backend</span>
+                <span class="tag-count">3</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> Database</span>
+                <span class="tag-count">2</span>
+            </a>
+            <a href="#" class="tag-item">
+                <span><i class='bx bx-checkbox'></i> DevOps</span>
+                <span class="tag-count">1</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="search-bar">
+                <i class='bx bx-search search-icon'></i>
+                <input type="text" class="search-input" placeholder="Search by title...">
+            </div>
+            <div class="header-actions">
+                <button class="btn-primary">
+                    <i class='bx bx-plus'></i> Add Bookmark
+                </button>
+                <a href="profile.html" class="profile-link">
+                    <span>John Doe</span>
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=0D8ABC&color=fff" alt="User Profile"
+                        class="user-avatar">
+                </a>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">All bookmarks</h2>
+                <button class="btn-sort">
+                    <i class='bx bx-sort-alt-2'></i> Sort by
+                </button>
+            </div>
+
+            <!-- Grid -->
+            <div class="bookmarks-grid">
+
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://s3.us-east-1.amazonaws.com/cdn.designcrowd.com/blog/67-programming-logos-to-say-hello-world/codeloop-logo-design-for-programming-startup-unused-by-mihai-dolganiuc-dribbble.png"
+                                class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">Frontend Mentor</h3>
+                                <span class="card-url">frontendmentor.io</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Improve your front-end coding skills by building real projects. Solve real-world HTML, CSS and
+                        JavaScript challenges whilst working to professional designs.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Practice</span>
+                        <span class="badge badge-green">Learning</span>
+                        <span class="badge badge-green">Community</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 47</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 23 Sep</span>
+                            <span class="stat-item"><i class='bx bx-calendar'></i> 15 Jan</span>
+                        </div>
+                        <i class='bx bx-pin'></i>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://developer.mozilla.org/favicon-48x48.png" class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">MDN Web Docs</h3>
+                                <span class="card-url">developer.mozilla.org</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and
+                        APIs for both Web sites and progressive web apps.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Reference</span>
+                        <span class="badge badge-green">HTML</span>
+                        <span class="badge badge-green">CSS</span>
+                        <span class="badge badge-green">JavaScript</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 152</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 24 Sep</span>
+                            <span class="stat-item"><i class='bx bx-calendar'></i> 10 Jan</span>
+                        </div>
+                        <i class='bx bx-pin'></i>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://react.dev/favicon.ico" class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">React Docs</h3>
+                                <span class="card-url">react.dev</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        The library for web and native user interfaces. Build user interfaces out of individual pieces
+                        called components.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">JavaScript</span>
+                        <span class="badge badge-green">Framework</span>
+                        <span class="badge badge-green">Reference</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 0</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> Never</span>
+                            <span class="stat-item"><i class='bx bx-calendar'></i> 20 Feb</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <!-- Using a placeholder for Claude since no easy favicon URL -->
+                            <div class="card-icon"
+                                style="display:flex;justify-content:center;align-items:center;font-weight:bold;color:#d97757;">
+                                C</div>
+                            <div class="card-text">
+                                <h3 class="card-title">Claude</h3>
+                                <span class="card-url">claude.ai</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        An AI assistant created by Anthropic that can help with analysis, writing, coding, math, and
+                        creative tasks through natural conversation.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Tools</span>
+                        <span class="badge badge-green">Ai</span>
+                        <span class="badge badge-green">Learning</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 73</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 23 Sep</span>
+                            <span class="stat-item"><i class='bx bx-calendar'></i> 18 Feb</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://cdn-icons-png.flaticon.com/512/8320/8320512.png" class="card-icon"
+                                alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">Web.dev</h3>
+                                <span class="card-url">web.dev</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Guidance to build modern web experiences that work on any browser. Learn about web vitals, PWAs,
+                        and more.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Performance</span>
+                        <span class="badge badge-green">Learning</span>
+                        <span class="badge badge-green">Tips</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 15</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 16 Aug</span>
+                            <span class="stat-item"><i class='bx bx-calendar'></i> 15 Feb</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://tailwindcss.com/favicon.ico" class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">Tailwind CSS</h3>
+                                <span class="card-url">tailwindcss.com</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        A utility-first CSS framework for rapidly building modern websites without ever leaving your
+                        HTML.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">CSS</span>
+                        <span class="badge badge-green">Framework</span>
+                        <span class="badge badge-green">Tools</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 52</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 19 Sep</span>
+                            <span class="stat-item"><i class='bx bx-calendar'></i> 12 Feb</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 7 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://dev.to/favicon.ico" class="card-icon" alt="Icon"
+                                style="background:black;">
+                            <div class="card-text">
+                                <h3 class="card-title">Dev.to</h3>
+                                <span class="card-url">dev.to</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        A constructive and inclusive social network for software developers. Share knowledge and grow
+                        your career.
+                    </p>
+                    <div class="card-tags">
+                        <!-- Tags truncated in image, adding generic -->
+                        <span class="badge badge-green">Community</span>
+                        <span class="badge badge-green">Article</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <!-- Stats truncated/guessed -->
+                            <span class="stat-item"><i class='bx bx-show'></i> 34</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> Yesterday</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 8 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://javascript.info/img/favicon/favicon.png" class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">JavaScript.info</h3>
+                                <span class="card-url">javascript.info</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        The Modern JavaScript Tutorial. How it's done now. From the basics to advanced topics with
+                        simple, but detailed explanations.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">JavaScript</span>
+                        <span class="badge badge-green">Book</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 98</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 2 Oct</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 9 -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://play-lh.googleusercontent.com/MoaYYQjGtmGLhG9HbjCDKyj44kwHj1HfbCI2Am70elRm35vJ-u4y4X5uEJjP97MAAsU"
+                                class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">freeCodeCamp</h3>
+                                <span class="card-url">freecodecamp.org</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Learn to code for free. Build projects. Earn certifications. An open source community that helps
+                        you learn to code with free online courses and certifications.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Learning</span>
+                        <span class="badge badge-green">Community</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 112</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 1 Dec</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- Card 10 (New) -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" class="card-icon"
+                                alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">Git</h3>
+                                <span class="card-url">git-scm.com</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Git is a free and open source distributed version control system designed to handle everything
+                        from small to very large projects with speed and efficiency.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Git</span>
+                        <span class="badge badge-green">Tools</span>
+                        <span class="badge badge-green">Version Control</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 42</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> Just added</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Gemini -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_SS.width-1300.jpg"
+                                class="card-icon" alt="Icon" style="object-fit:cover;">
+                            <div class="card-text">
+                                <h3 class="card-title">Gemini</h3>
+                                <span class="card-url">gemini.google.com</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Supercharge your creativity and productivity with Gemini, Google's most capable AI.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Ai</span>
+                        <span class="badge badge-green">Tool</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 205</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> Today</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MongoDB -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://www.svgrepo.com/show/331488/mongodb.svg" class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">MongoDB</h3>
+                                <span class="card-url">mongodb.com</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        The developer data platform that provides the services and tools you need to build distributed
+                        applications at the scale you need.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Database</span>
+                        <span class="badge badge-green">Backend</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 45</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 2 days ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Node.js -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://nodejs.org/static/images/favicons/favicon.png" class="card-icon"
+                                alt="Icon" style="background:#333;">
+                            <div class="card-text">
+                                <h3 class="card-title">Node.js</h3>
+                                <span class="card-url">nodejs.org</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets
+                        developers create servers, web apps, tools and scripts.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">JavaScript</span>
+                        <span class="badge badge-green">Backend</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 312</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 1 week ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Docker -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://www.docker.com/wp-content/uploads/2023/04/cropped-Docker-favicon-32x32.png"
+                                class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">Docker</h3>
+                                <span class="card-url">docker.com</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Docker is a platform designed to help developers build, share, and run modern applications. We
+                        handle the tedious setup, so you can focus on the code.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Tool</span>
+                        <span class="badge badge-green">DevOps</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 89</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 3 days ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- GitHub -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://github.githubassets.com/favicons/favicon.svg" class="card-icon"
+                                alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">GitHub</h3>
+                                <span class="card-url">github.com</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        GitHub is where over 100 million developers shape the future of software, together. Contribute
+                        to the open source community.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Git</span>
+                        <span class="badge badge-green">Community</span>
+                        <span class="badge badge-green">Tools</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 430</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 4 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Firebase -->
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <img src="https://www.gstatic.com/devrel-devsite/prod/vc85a86d26715f0729352e825a0a4c0627771746654a1be77373898f7be167d4f/firebase/images/favicon.png"
+                                class="card-icon" alt="Icon">
+                            <div class="card-text">
+                                <h3 class="card-title">Firebase</h3>
+                                <span class="card-url">firebase.google.com</span>
+                            </div>
+                        </div>
+                        <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                    </div>
+                    <p class="card-description">
+                        Google's mobile platform that helps you quickly develop high-quality apps and grow your
+                        business.
+                    </p>
+                    <div class="card-tags">
+                        <span class="badge badge-green">Backend</span>
+                        <span class="badge badge-green">Database</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 56</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> 1 month ago</span>
+                        </div>
+                    </div>
+                </article>
+        </section>
+    </main>
+
+    <!-- Add Bookmark Modal -->
+    <div class="modal-overlay" id="addModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Add New Bookmark</h3>
+                <button class="card-menu-btn" id="closeModal"><i class='bx bx-x'></i></button>
+            </div>
+            <form id="addForm">
+                <div class="form-group">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-input" required placeholder="e.g. Google">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">URL</label>
+                    <input type="url" class="form-input" required placeholder="https://google.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-textarea" placeholder="Brief description..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tags (comma separated)</label>
+                    <input type="text" class="form-input" placeholder="Search, Tool, Tech">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelAdd">Cancel</button>
+                    <button type="submit" class="btn-primary">Save Bookmark</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Tag Filter Logic (Existing + Updated for Dynamic) ---
+            const tagLinks = document.querySelectorAll('.tag-item');
+            const sectionTitle = document.querySelector('.section-title');
+            const initialTitle = "All bookmarks";
+            let currentFilter = 'All';
+
+            function getTagText(link) {
+                const span = link.querySelector('span:first-child');
+                return span ? span.textContent.trim() : link.textContent.trim();
+            }
+
+            function filterCards(tagText) {
+                currentFilter = tagText;
+                const cards = document.querySelectorAll('.card');
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const cardTags = Array.from(card.querySelectorAll('.badge')).map(b => b.textContent.trim());
+                    const matches = tagText === 'All' || cardTags.some(t => t.toLowerCase() === tagText.toLowerCase());
+
+                    if (matches) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (tagText === 'All') {
+                    sectionTitle.textContent = initialTitle;
+                } else {
+                    sectionTitle.textContent = `${tagText} bookmarks`;
+                }
+            }
+
+            tagLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    tagLinks.forEach(l => l.classList.remove('active'));
+                    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                    link.classList.add('active');
+                    filterCards(getTagText(link));
+                });
+            });
+
+            const homeLink = document.querySelector('.nav-item');
+            if (homeLink) {
+                homeLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    tagLinks.forEach(l => l.classList.remove('active'));
+                    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                    homeLink.classList.add('active');
+                    filterCards('All');
+                });
+            }
+
+            // --- Add Bookmark Logic ---
+            const addBtn = document.querySelector('.btn-primary'); // "Add Bookmark" button
+            const modal = document.getElementById('addModal');
+            const closeModalBtn = document.getElementById('closeModal');
+            const cancelAddBtn = document.getElementById('cancelAdd');
+            const addForm = document.getElementById('addForm');
+            const grid = document.querySelector('.bookmarks-grid');
+
+            function openModal() {
+                modal.classList.add('active');
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                addForm.reset();
+            }
+
+            addBtn.addEventListener('click', openModal);
+            closeModalBtn.addEventListener('click', closeModal);
+            cancelAddBtn.addEventListener('click', closeModal);
+
+            // Close on click outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            addForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const title = addForm.querySelectorAll('input')[0].value;
+                const url = addForm.querySelectorAll('input')[1].value;
+                const desc = addForm.querySelector('textarea').value;
+                const tagsInput = addForm.querySelectorAll('input')[2].value;
+
+                const tags = tagsInput.split(',').map(t => t.trim()).filter(t => t);
+                const domain = new URL(url).hostname;
+                const now = new Date();
+                const dateStr = `${now.getDate()} ${now.toLocaleString('default', { month: 'short' })}`;
+
+                // Create Card HTML
+                const article = document.createElement('article');
+                article.className = 'card';
+                article.innerHTML = `
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <div class="card-icon" style="display:flex;justify-content:center;align-items:center;font-weight:bold;color:#6b7280;font-size:1.2rem;">
+                                ${title[0].toUpperCase()}
+                            </div>
+                            <div class="card-text">
+                                <h3 class="card-title">${title}</h3>
+                                <span class="card-url">${domain}</span>
+                            </div>
+                        </div>
+                        <div class="card-menu-container">
+                             <button class="card-menu-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                             <!-- Dropdown will be injected or handled via delegate -->
+                        </div>
+                    </div>
+                    <p class="card-description">${desc}</p>
+                    <div class="card-tags">
+                        ${tags.map(t => `<span class="badge badge-green">${t}</span>`).join('')}
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-stats">
+                            <span class="stat-item"><i class='bx bx-show'></i> 0</span>
+                            <span class="stat-item"><i class='bx bx-time'></i> Just now</span>
+                        </div>
+                    </div>
+                `;
+
+                grid.insertBefore(article, grid.firstChild);
+
+                // Re-apply filter if needed
+                if (currentFilter !== 'All') filterCards(currentFilter);
+
+                closeModal();
+            });
+
+            // --- Menu Logic (Event Delegation) ---
+            document.addEventListener('click', (e) => {
+                // Toggle Menu
+                if (e.target.closest('.card-menu-btn') && !e.target.closest('#closeModal')) {
+                    const btn = e.target.closest('.card-menu-btn');
+                    const container = btn.closest('.card-menu-container') || btn.parentElement; // Fallback
+
+                    // If container doesn't have structure yet (static HTML logic check)
+                    // The static HTML implementation had the button directly in card-header. 
+                    // To support dropdowns properly without changing every static card structure instantly,
+                    // we can dynamically append the dropdown if it's missing, or toggle it.
+
+                    // Let's ensure the parent is relative for positioning
+                    if (getComputedStyle(container).position === 'static') {
+                        container.style.position = 'relative';
+                    }
+
+                    let dropdown = container.querySelector('.dropdown-menu');
+                    if (!dropdown) {
+                        dropdown = document.createElement('div');
+                        dropdown.className = 'dropdown-menu';
+                        dropdown.innerHTML = `
+                            <div class="dropdown-item"><i class='bx bx-pencil'></i> Edit</div>
+                            <div class="dropdown-item danger delete-btn"><i class='bx bx-trash'></i> Delete</div>
+                        `;
+                        container.appendChild(dropdown);
+                    }
+
+                    // Close all other dropdowns
+                    document.querySelectorAll('.dropdown-menu.active').forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                    e.stopPropagation();
+                }
+                // Handle Delete Action
+                else if (e.target.closest('.delete-btn')) {
+                    const card = e.target.closest('.card');
+                    if (card) {
+                        card.remove();
+                    }
+                }
+                // Close when clicking outside
+                else {
+                    document.querySelectorAll('.dropdown-menu.active').forEach(d => d.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
